@@ -15,8 +15,8 @@ class CreateTableTransactionsArticles extends Migration
     {
       Schema::create('trans_Article', function (Blueprint $table) {
           $table->increments('id_trans_Article');
-          $table->integer('id_transaction');
-          $table->integer('id_article');
+          $table->integer('id_transaction')->unsigned();
+          $table->integer('id_article')->unsigned();
           $table->integer('quantite');
           $table->timestamps();
       });

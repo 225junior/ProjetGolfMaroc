@@ -16,8 +16,8 @@ class CreateTablePromotion extends Migration
 
       Schema::create('promotions', function (Blueprint $table) {
           $table->increments('id_promo');
-          $table->integer('id_magasin');
-          $table->integer('id_article');
+          $table->integer('id_magasin')->unsigned();
+          $table->integer('id_article')->unsigned();
           $table->string('description');
           $table->date('date_debut');
           $table->date('date_fin');
